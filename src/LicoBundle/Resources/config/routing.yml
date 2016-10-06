@@ -1,0 +1,3 @@
+lico_homepage:
+    path:     /
+    defaults: { _controller: LicoBundle:Default:index }

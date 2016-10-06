@@ -1,0 +1,21 @@
+LicoBundle\Entity\Licorne:
+    type: entity
+    table: null
+    repositoryClass: LicoBundle\Repository\LicorneRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        iDLicorne:
+            type: integer
+            unique: true
+            column: ID_Licorne
+        nomLicorne:
+            type: string
+            length: 255
+            unique: true
+            column: Nom_Licorne
+    lifecycleCallbacks: {  }

@@ -1,0 +1,21 @@
+LicoBundle\Entity\Environnement:
+    type: entity
+    table: null
+    repositoryClass: LicoBundle\Repository\EnvironnementRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        iDEnvironnement:
+            type: integer
+            unique: true
+            column: ID_Environnement
+        nomEnvironnement:
+            type: string
+            length: 255
+            unique: true
+            column: Nom_Environnement
+    lifecycleCallbacks: {  }

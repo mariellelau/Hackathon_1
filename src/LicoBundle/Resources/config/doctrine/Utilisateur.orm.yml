@@ -1,0 +1,20 @@
+LicoBundle\Entity\Utilisateur:
+    type: entity
+    table: null
+    repositoryClass: LicoBundle\Repository\UtilisateurRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        iDUtilisateur:
+            type: integer
+            unique: true
+            column: ID_utilisateur
+        nom:
+            type: string
+            length: 255
+            column: Nom
+    lifecycleCallbacks: {  }
