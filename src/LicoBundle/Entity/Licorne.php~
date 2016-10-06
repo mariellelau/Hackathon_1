@@ -1,0 +1,13 @@
+<?php
+
+namespace LicoBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Licorne
+ */
+class Licorne
+{
+
+}

@@ -18,3 +18,7 @@ LicoBundle\Entity\Utilisateur:
             length: 255
             column: Nom
     lifecycleCallbacks: {  }
+    manyToMany:
+        Licornes:
+            targetEntity: Licorne
+

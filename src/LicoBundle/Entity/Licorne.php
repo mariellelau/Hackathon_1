@@ -9,13 +9,14 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Licorne
 {
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
     /**
-     * @var int
+     * @var integer
      */
     private $iDLicorne;
 
@@ -24,11 +25,16 @@ class Licorne
      */
     private $nomLicorne;
 
+    /**
+     * @var \LicoBundle\Entity\Environnement
+     */
+    private $Environnement;
+
 
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -51,7 +57,7 @@ class Licorne
     /**
      * Get iDLicorne
      *
-     * @return integer
+     * @return integer 
      */
     public function getIDLicorne()
     {
@@ -74,22 +80,33 @@ class Licorne
     /**
      * Get nomLicorne
      *
-     * @return string
+     * @return string 
      */
     public function getNomLicorne()
     {
         return $this->nomLicorne;
     }
 
-    Licorne:
-        type: Licorne
-    oneToMany:
-        children:
-            targetEntity: Licorne
-            mappedBy: Environnement
-    manyToOne:
-        parent:
-            targetEntity: Licorne
-            inversedBy: Licorne
+    /**
+     * Set Environnement
+     *
+     * @param \LicoBundle\Entity\Environnement $environnement
+     * @return Licorne
+     */
+    public function setEnvironnement(\LicoBundle\Entity\Environnement $environnement = null)
+    {
+        $this->Environnement = $environnement;
 
+        return $this;
+    }
+
+    /**
+     * Get Environnement
+     *
+     * @return \LicoBundle\Entity\Environnement 
+     */
+    public function getEnvironnement()
+    {
+        return $this->Environnement;
+    }
 }

@@ -19,3 +19,9 @@ LicoBundle\Entity\Licorne:
             unique: true
             column: Nom_Licorne
     lifecycleCallbacks: {  }
+    manyToOne:
+        Environnement:
+            targetEntity: Environnement
+            joinColumn:
+                name: environnement_id
+                referencedColumnName: ID_Environnement
