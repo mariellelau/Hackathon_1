@@ -9,7 +9,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Environnement
 {
-
+    public function __toString()
+    {
+        return $this->nomEnvironnement;
+    }
+    //generate code
     /**
      * @var integer
      */
@@ -24,6 +28,16 @@ class Environnement
      * @var string
      */
     private $nomEnvironnement;
+
+    /**
+     * @var string
+     */
+    private $paysEnvironnement;
+
+    /**
+     * @var integer
+     */
+    private $temperatureEnvironnement;
 
 
     /**
@@ -80,5 +94,51 @@ class Environnement
     public function getNomEnvironnement()
     {
         return $this->nomEnvironnement;
+    }
+
+    /**
+     * Set paysEnvironnement
+     *
+     * @param string $paysEnvironnement
+     * @return Environnement
+     */
+    public function setPaysEnvironnement($paysEnvironnement)
+    {
+        $this->paysEnvironnement = $paysEnvironnement;
+
+        return $this;
+    }
+
+    /**
+     * Get paysEnvironnement
+     *
+     * @return string 
+     */
+    public function getPaysEnvironnement()
+    {
+        return $this->paysEnvironnement;
+    }
+
+    /**
+     * Set temperatureEnvironnement
+     *
+     * @param integer $temperatureEnvironnement
+     * @return Environnement
+     */
+    public function setTemperatureEnvironnement($temperatureEnvironnement)
+    {
+        $this->temperatureEnvironnement = $temperatureEnvironnement;
+
+        return $this;
+    }
+
+    /**
+     * Get temperatureEnvironnement
+     *
+     * @return integer 
+     */
+    public function getTemperatureEnvironnement()
+    {
+        return $this->temperatureEnvironnement;
     }
 }

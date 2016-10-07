@@ -125,9 +125,9 @@ class TextDescriptor extends Descriptor
         $showPrivate = isset($options['show_private']) && $options['show_private'];
 
         if ($showPrivate) {
-            $options['output']->title('Symfony Container Public and Private Tags');
+            $options['output']->title('Symfony Container public and Private Tags');
         } else {
-            $options['output']->title('Symfony Container Public Tags');
+            $options['output']->title('Symfony Container public Tags');
         }
 
         foreach ($this->findDefinitionsByTag($builder, $showPrivate) as $tag => $definitions) {
@@ -169,9 +169,9 @@ class TextDescriptor extends Descriptor
         $showTag = isset($options['tag']) ? $options['tag'] : null;
 
         if ($showPrivate) {
-            $title = 'Symfony Container Public and Private Services';
+            $title = 'Symfony Container public and Private Services';
         } else {
-            $title = 'Symfony Container Public Services';
+            $title = 'Symfony Container public Services';
         }
 
         if ($showTag) {
@@ -278,7 +278,7 @@ class TextDescriptor extends Descriptor
         $tableRows[] = array('Tags', $tagInformation);
 
         $tableRows[] = array('Scope', $definition->getScope(false));
-        $tableRows[] = array('Public', $definition->isPublic() ? 'yes' : 'no');
+        $tableRows[] = array('public', $definition->isPublic() ? 'yes' : 'no');
         $tableRows[] = array('Synthetic', $definition->isSynthetic() ? 'yes' : 'no');
         $tableRows[] = array('Lazy', $definition->isLazy() ? 'yes' : 'no');
 

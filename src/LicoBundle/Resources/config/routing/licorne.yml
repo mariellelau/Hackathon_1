@@ -1,0 +1,24 @@
+licorne_index:
+    path:     /
+    defaults: { _controller: "LicoBundle:Licorne:index" }
+    methods:  GET
+
+licorne_show:
+    path:     /{id}/show
+    defaults: { _controller: "LicoBundle:Licorne:show" }
+    methods:  GET
+
+licorne_new:
+    path:     /new
+    defaults: { _controller: "LicoBundle:Licorne:new" }
+    methods:  [GET, POST]
+
+licorne_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LicoBundle:Licorne:edit" }
+    methods:  [GET, POST]
+
+licorne_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LicoBundle:Licorne:delete" }
+    methods:  DELETE

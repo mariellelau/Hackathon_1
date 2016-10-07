@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang=fr>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('bundles/lico/css/style.css') }}"/>
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+    <title>LicoBox</title>
+</head>
+{% block body %}
+    <div class="row">
+        <div class="col l3 offset-l1 m12 s12 texte">
+            <p>
+                Où souhaitez-vous aller ?
+            </p>
+        </div>
+        <div class="col l2 offset-l1 m2 offset-m5 s2 offset-s5 logo">
+            <img src="{{ asset('bundles/lico/images/6784492-cute-pink-unicorn.jpg') }}" alt="logo"/>
+        </div>
+        <div class="col l3 m12 s12 info">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pays</th>
+                        <th>Lieu</th>
+                    </tr>
+                </thead>
+
+
+
+                    <tbody>
+                    {% for licorne in licornes %}
+
+                    <tr>
+
+                            <td>
+
+                                <a href="{{ path('page_4', { 'id': licorne.id }) }}">{{ licorne.environnement.paysEnvironnement }}</a>
+                        </td>
+
+                        <td>
+                            {{ licorne.environnement.nomEnvironnement }}
+                        </td>
+
+
+                </tr>
+                    {% endfor %}
+
+                    </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+</html>

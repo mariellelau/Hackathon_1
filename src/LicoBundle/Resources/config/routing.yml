@@ -1,3 +1,39 @@
+lico_environnement:
+    resource: "@LicoBundle/Resources/config/routing/environnement.yml"
+    prefix:   /environnement
+
+lico_licorne:
+    resource: "@LicoBundle/Resources/config/routing/licorne.yml"
+    prefix:   /licorne
+
+lico_utilisateur:
+    resource: "@LicoBundle/Resources/config/routing/utilisateur.yml"
+    prefix:   /utilisateur
+
 lico_homepage:
     path:     /
     defaults: { _controller: LicoBundle:Default:index }
+
+page_1:
+    path:     /page1
+    defaults: { _controller: LicoBundle:Default:page }
+
+page_2:
+    path:     /page2
+    defaults: { _controller: LicoBundle:Default:page2 }
+
+page_3:
+    path:     /page3
+    defaults: { _controller: LicoBundle:Default:page3 }
+
+page_4:
+    path:     /{id}/page4
+    defaults: { _controller: LicoBundle:Default:page4 }
+
+page_5:
+    path:     /page5
+    defaults: { _controller: LicoBundle:Default:page5 }
+
+page_6:
+    path:     /page6
+    defaults: { _controller: LicoBundle:Default:page6 }

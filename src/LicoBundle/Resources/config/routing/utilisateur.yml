@@ -1,0 +1,12 @@
+utilisateur_index:
+    path:     /
+    defaults: { _controller: "LicoBundle:Utilisateur:index" }
+    methods:  GET
+
+utilisateur_show:
+    path:     /{id}/show
+    defaults: { _controller: "LicoBundle:Utilisateur:show" }
+    methods:  GET
+
+
+

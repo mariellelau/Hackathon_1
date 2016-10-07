@@ -1,0 +1,54 @@
+body, .lien{
+    color:white;
+    font-size:18px;
+}
+
+.cadre{
+}
+
+.texte{
+    width:1000%;
+    border:5px #c7c7c7 solid;
+    margin-left:12em;
+    background-color:rgb(232,12,122);
+}
+
+img{
+    width:120px;
+    height:120px;
+    margin-top:40%;
+}
+
+.info{
+    width:100%;
+    border:5px #c7c7c7 solid;
+    display:flex:1;
+    margin-right:12em;
+    text-align:center;
+    background-color:rgb(232,12,122);
+
+}
+
+.row{
+    margin:10%;
+    display:flex;
+}
+
+.sylvestre{
+    width:150px;
+    height:150px;
+    margin-bottom:20px;
+}
+
+.fin {
+    width: 400px;
+    height: 400px;
+    margin: 35%;
+}
+
+.boutton{
+    padding-left:15px;
+    padding-right:15px;
+    margin-left:200px;
+    margin-right:200px;
+}

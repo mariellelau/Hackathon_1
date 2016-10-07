@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Licorne</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ licorne.id }}</td>
+            </tr>
+            <tr>
+                <th>Idlicorne</th>
+                <td>{{ licorne.iDLicorne }}</td>
+            </tr>
+            <tr>
+                <th>Nomlicorne</th>
+                <td>{{ licorne.nomLicorne }}</td>
+            </tr>
+            <tr>
+                <th>Cornelicorne</th>
+                <td>{{ licorne.corneLicorne }}</td>
+            </tr>
+            <tr>
+                <th>Yeuxlicorne</th>
+                <td>{{ licorne.yeuxLicorne }}</td>
+            </tr>
+            <tr>
+                <th>Alignementlicorne</th>
+                <td>{{ licorne.alignementLicorne }}</td>
+            </tr>
+            <tr>
+                <th>Regimelicorne</th>
+                <td>{{ licorne.regimeLicorne }}</td>
+            </tr>
+            <tr>
+                <th>Pelagelicorne</th>
+                <td>{{ licorne.pelageLicorne }}</td>
+            </tr>
+            <tr>
+                <th>Imagelicorne</th>
+                <td>{{ licorne.imageLicorne }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('licorne_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('licorne_edit', { 'id': licorne.id }) }}">Edit</a>
+        </li>
+
+    </ul>
+{% endblock %}

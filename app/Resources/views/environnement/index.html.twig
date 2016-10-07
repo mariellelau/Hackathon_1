@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Environnement list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idenvironnement</th>
+                <th>Nomenvironnement</th>
+                <th>Paysenvironnement</th>
+                <th>Temperatureenvironnement</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for environnement in environnements %}
+            <tr>
+                <td><a href="{{ path('environnement_show', { 'id': environnement.id }) }}">{{ environnement.id }}</a></td>
+                <td>{{ environnement.iDEnvironnement }}</td>
+                <td>{{ environnement.nomEnvironnement }}</td>
+                <td>{{ environnement.paysEnvironnement }}</td>
+                <td>{{ environnement.temperatureEnvironnement }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('environnement_show', { 'id': environnement.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('environnement_edit', { 'id': environnement.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('environnement_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

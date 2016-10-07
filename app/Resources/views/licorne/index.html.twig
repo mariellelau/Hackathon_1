@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Licorne list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idlicorne</th>
+                <th>Nomlicorne</th>
+                <th>Cornelicorne</th>
+                <th>Yeuxlicorne</th>
+                <th>Alignementlicorne</th>
+                <th>Regimelicorne</th>
+                <th>Pelagelicorne</th>
+                <th>Imagelicorne</th>
+                <th>environement</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for licorne in licornes %}
+            <tr>
+                <td><a href="{{ path('licorne_show', { 'id': licorne.id }) }}">{{ licorne.id }}</a></td>
+                <td>{{ licorne.iDLicorne }}</td>
+                <td>{{ licorne.nomLicorne }}</td>
+                <td>{{ licorne.corneLicorne }}</td>
+                <td>{{ licorne.yeuxLicorne }}</td>
+                <td>{{ licorne.alignementLicorne }}</td>
+                <td>{{ licorne.regimeLicorne }}</td>
+                <td>{{ licorne.pelageLicorne }}</td>
+                <td>{{ licorne.imageLicorne }}</td>
+                <td>{{ licorne.environnement }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('licorne_show', { 'id': licorne.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('licorne_edit', { 'id': licorne.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('licorne_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

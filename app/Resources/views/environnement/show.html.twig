@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Environnement</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ environnement.id }}</td>
+            </tr>
+            <tr>
+                <th>Idenvironnement</th>
+                <td>{{ environnement.iDEnvironnement }}</td>
+            </tr>
+            <tr>
+                <th>Nomenvironnement</th>
+                <td>{{ environnement.nomEnvironnement }}</td>
+            </tr>
+            <tr>
+                <th>Paysenvironnement</th>
+                <td>{{ environnement.paysEnvironnement }}</td>
+            </tr>
+            <tr>
+                <th>Temperatureenvironnement</th>
+                <td>{{ environnement.temperatureEnvironnement }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('environnement_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('environnement_edit', { 'id': environnement.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

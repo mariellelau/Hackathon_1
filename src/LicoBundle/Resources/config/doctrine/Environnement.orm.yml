@@ -18,4 +18,13 @@ LicoBundle\Entity\Environnement:
             length: 255
             unique: true
             column: Nom_Environnement
+        paysEnvironnement:
+                    type: string
+                    length: 255
+                    unique: true
+                    column: Pays_Environnement
+        temperatureEnvironnement:
+                    type: integer
+                    unique: false
+                    column: Temperature_Environnement
     lifecycleCallbacks: {  }

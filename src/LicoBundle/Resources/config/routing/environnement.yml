@@ -1,0 +1,24 @@
+environnement_index:
+    path:     /
+    defaults: { _controller: "LicoBundle:Environnement:index" }
+    methods:  GET
+
+environnement_show:
+    path:     /{id}/show
+    defaults: { _controller: "LicoBundle:Environnement:show" }
+    methods:  GET
+
+environnement_new:
+    path:     /new
+    defaults: { _controller: "LicoBundle:Environnement:new" }
+    methods:  [GET, POST]
+
+environnement_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LicoBundle:Environnement:edit" }
+    methods:  [GET, POST]
+
+environnement_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LicoBundle:Environnement:delete" }
+    methods:  DELETE

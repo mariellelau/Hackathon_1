@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Licorne
  */
+
 class Licorne
 {
 
@@ -24,6 +25,36 @@ class Licorne
      * @var string
      */
     private $nomLicorne;
+
+    /**
+     * @var string
+     */
+    private $corneLicorne;
+
+    /**
+     * @var string
+     */
+    private $yeuxLicorne;
+
+    /**
+     * @var string
+     */
+    private $alignementLicorne;
+
+    /**
+     * @var string
+     */
+    private $regimeLicorne;
+
+    /**
+     * @var string
+     */
+    private $pelageLicorne;
+
+    /**
+     * @var string
+     */
+    private $imageLicorne;
 
     /**
      * @var \LicoBundle\Entity\Environnement
@@ -85,6 +116,144 @@ class Licorne
     public function getNomLicorne()
     {
         return $this->nomLicorne;
+    }
+
+    /**
+     * Set corneLicorne
+     *
+     * @param string $corneLicorne
+     * @return Licorne
+     */
+    public function setCorneLicorne($corneLicorne)
+    {
+        $this->corneLicorne = $corneLicorne;
+
+        return $this;
+    }
+
+    /**
+     * Get corneLicorne
+     *
+     * @return string 
+     */
+    public function getCorneLicorne()
+    {
+        return $this->corneLicorne;
+    }
+
+    /**
+     * Set yeuxLicorne
+     *
+     * @param string $yeuxLicorne
+     * @return Licorne
+     */
+    public function setYeuxLicorne($yeuxLicorne)
+    {
+        $this->yeuxLicorne = $yeuxLicorne;
+
+        return $this;
+    }
+
+    /**
+     * Get yeuxLicorne
+     *
+     * @return string 
+     */
+    public function getYeuxLicorne()
+    {
+        return $this->yeuxLicorne;
+    }
+
+    /**
+     * Set alignementLicorne
+     *
+     * @param string $alignementLicorne
+     * @return Licorne
+     */
+    public function setAlignementLicorne($alignementLicorne)
+    {
+        $this->alignementLicorne = $alignementLicorne;
+
+        return $this;
+    }
+
+    /**
+     * Get alignementLicorne
+     *
+     * @return string 
+     */
+    public function getAlignementLicorne()
+    {
+        return $this->alignementLicorne;
+    }
+
+    /**
+     * Set regimeLicorne
+     *
+     * @param string $regimeLicorne
+     * @return Licorne
+     */
+    public function setRegimeLicorne($regimeLicorne)
+    {
+        $this->regimeLicorne = $regimeLicorne;
+
+        return $this;
+    }
+
+    /**
+     * Get regimeLicorne
+     *
+     * @return string 
+     */
+    public function getRegimeLicorne()
+    {
+        return $this->regimeLicorne;
+    }
+
+    /**
+     * Set pelageLicorne
+     *
+     * @param string $pelageLicorne
+     * @return Licorne
+     */
+    public function setPelageLicorne($pelageLicorne)
+    {
+        $this->pelageLicorne = $pelageLicorne;
+
+        return $this;
+    }
+
+    /**
+     * Get pelageLicorne
+     *
+     * @return string 
+     */
+    public function getPelageLicorne()
+    {
+        return $this->pelageLicorne;
+    }
+
+    /**
+     * Set imageLicorne
+     *
+     * @param string $imageLicorne
+     * @return Licorne
+     */
+    public function setImageLicorne($imageLicorne)
+    {
+        $this->imageLicorne = $imageLicorne;
+
+        return $this;
+    }
+
+    /**
+     * Get imageLicorne
+     *
+     * @return string 
+     */
+    public function getImageLicorne()
+    {
+        return $this->imageLicorne;
     }
 
     /**
